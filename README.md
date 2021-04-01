@@ -9,12 +9,13 @@ that implement many typical audio and associated support functions.
 The purpose is to support speech and neural work.  
 This does not, therefore, have every possible audio function.  
 In particular, input/output, conversion and resampling are well performed  
-by existing command-line tools such as sox, ffmpeg, etc. (also in C/C++).  
+by existing command-line tools such as sox, ffmpeg, etc.  
 
 The command-line programs are written in C++ with a consistent style and interface.  
-The low-level functions themselves are written in C for fastest performance (e.g., openBLAS).  
+The low-level functions themselves are written in C for fastest performance (like openBLAS).  
 
 The C functions are meant for the developer; the C++ command-line tools are meant for the end-user.  
+
 The interface to each C function is BLAS-like, meaning that one specifies the input and/or output dimensions,  
 the matrix order as row-major or column-major, and so on.  
 
@@ -52,15 +53,7 @@ cd /opt/codee/dsp
 make  
 ```
 
-Each C function can also be compiled separately; see c subdirectory Makefile for details.  
-To make an archive library:  
-```
-cd /opt/codee/dsp/c  
-make libaud.a CC=clang  
-```
-This creates /opt/codee/aud/lib/libaud.a with all of the C object files.  
-This could be useful if trying to use the C functions in other applications.  
-Change clang to clang++ to compile for use with C++ applications.  
+Each C function can also be compiled and used separately; see c subdirectory Makefile for details.  
 
 
 ## Usage
@@ -87,4 +80,3 @@ This is currently only to view the project in progress.
 
 ## License
 [BSD 3-Clause](https://choosealicense.com/licenses/bsd-3-clause/)
-
