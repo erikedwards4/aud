@@ -1,5 +1,5 @@
 #@author Erik Edwards
-#@date 2017-2020
+#@date 2017-present
 #@license BSD 3-clause
 
 #aud is my own library of C functions for general audio processing.

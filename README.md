@@ -49,7 +49,7 @@ https://github.com/erikedwards4/dsp
 ```
 cd /opt/codee  
 git clone https://github.com/erikedwards4/aud  
-cd /opt/codee/dsp  
+cd /opt/codee/aud  
 make  
 ```
 
@@ -60,7 +60,7 @@ Each C function can also be compiled and used separately; see c subdirectory Mak
 See each resulting command-line tool for help (use -h or --help option).  
 For example:  
 ```
-/opt/codee/dsp/bin/fir --help  
+/opt/codee/aud/bin/preemph --help  
 ```
 
 
