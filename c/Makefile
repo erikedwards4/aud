@@ -38,7 +38,7 @@ Dirs:
 Pre: rms_scale preemph dither
 rms_scale: rms_scale.c; $(CC) -c $@.c -o obj/$@.o $(CFLAGS)
 preemph: preemph.c; $(CC) -c $@.c -o obj/$@.o $(CFLAGS)
-dither: dither.c; if [ $(CC) = "clang" ]; then gcc -c $@.c -o obj/$@.o $(CFLAGS); else $(CC) -c $@.c -o obj/$@.o $(CFLAGS); fi
+dither: dither.c; $(CC) -c $@.c -o obj/$@.o $(CFLAGS)
 
 
 #Freqs: utils for various frequency scales (linear, Mel, etc.)
