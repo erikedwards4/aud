@@ -28,10 +28,17 @@ CFLAGS=$(WFLAG) $(STD) -O3 -march=native -fPIC
 
 
 All: all
-all: Dirs Pre Freqs Spectrogram CCs Deltas LSF_LAR Clean
+all: Dirs Generate Pre Freqs Spectrogram CCs Deltas LSF_LAR Clean
 
 Dirs:
 	mkdir -pm 777 obj
+
+
+#Generate: 0 inputs, 1 output
+#Generate: Noise Filt_Coeffs Curves
+#Noise: grey (see Wikipedia)?
+#Filt_Coeffs: gammatone_iir gammatone_fir gammachirp_fir
+#Curves: equal_loudness_contour
 
 
 #Pre: common preprocessing steps
